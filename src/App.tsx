@@ -1,0 +1,274 @@
+import React from 'react';
+import {
+  Star,
+  Shield,
+  Sparkles,
+  Bug,
+  Clock,
+  Heart,
+  CheckCircle2,
+  PhoneCall,
+  MessageCircle,
+  PlayCircle,
+  Split,
+  Users,
+  HelpCircle,
+  Workflow,
+} from 'lucide-react';
+
+function App() {
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="min-h-screen flex flex-col lg:flex-row">
+        <div className="flex-1 p-8 lg:p-16 flex flex-col justify-center">
+          <h1 className="text-4xl lg:text-6xl font-bold mb-6">
+            Diga adeus à sujeira{' '}
+            <span className="bg-gradient-to-r from-[#0B9D88] via-[#36E1C5] to-[#B9FFF5] bg-clip-text text-transparent">
+              Diga olá ao Conforto
+            </span>
+          </h1>
+          <p className="text-gray-600 text-lg mb-8">
+          Mais de 100 famílias em Campinas e região confiaram em nós para dar vida nova aos seus móveis queridos. Limpeza especializada de estofados que transforma sua casa em um espaço mais saudável e bonito.
+          </p>
+          <div className="flex gap-4">
+            <button className="bg-[#0B9D88] hover:bg-[#36E1C5] text-white font-semibold py-4 px-8 rounded-lg transition-all">
+             Agende agora
+            </button>
+            <button className="inline-flex items-center justify-center border-2 border-[#0B9D88] text-[#0B9D88] font-semibold py-4 px-8 rounded-lg hover:bg-[#0B9D88] hover:text-white transition-all">
+              <PlayCircle className="w-5 h-5 mr-2" />
+               Veja como
+            </button>
+          </div>
+        </div>
+        <div className="flex-1 relative">
+        <img
+          src="../src/assets/images/sofá-meio-sujo-meio-limpo.png"
+          alt="Clean sofa transformation"
+          className="w-full h-full object-contain"
+        />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 px-8 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-16">Nossos Serviços Especializados</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: <Sparkles className="w-8 h-8 text-[#0B9D88]" />,
+                title: 'Limpeza de Sofá',
+                description: 'Limpeza profunda que remove manchas, odores e alérgenos, restaurando a beleza original do seu sofá e prolongando sua vida útil.'
+              },
+              {
+                icon: <Shield className="w-8 h-8 text-[#0B9D88]" />,
+                title: 'Impermeabilização',
+                description: 'Proteção avançada contra derramamentos e manchas, tornando seus móveis resistentes a acidentes diários e mais fáceis de manter.'
+              },
+              {
+                icon: <Bug className="w-8 h-8 text-[#0B9D88]" />,
+                title: 'Higienização de Colchões',
+                description: 'Eliminação completa de ácaros, bactérias e alérgenos, garantindo um ambiente de sono mais saudável para sua família.'
+              },
+            ].map((service, index) => (
+              <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                {service.icon}
+                <h3 className="text-xl font-semibold mt-4 mb-2">{service.title}</h3>
+                <p className="text-gray-600">{service.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How We Work Section */}
+      <section className="py-20 px-8">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-16">Nosso Processo</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { step: '01', title: 'Inspeção', description: 'Thorough evaluation of your furniture\'s condition' },
+              { step: '02', title: 'Plano personalizado', description: 'Abordagem de limpeza personalizada para melhores resultados' },
+              { step: '03', title: 'Limpeza profunda', description: 'Limpeza profissional com produtos ecológicos' },
+              { step: '04', title: 'Proteção', description: 'Toques finais e tratamento protetor' },
+            ].map((step, index) => (
+              <div key={index} className="relative">
+                <div className="text-6xl font-bold text-[#36E1C5]/20 mb-4">{step.step}</div>
+                <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
+                <p className="text-gray-600">{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Before/After Section */}
+      <section className="py-20 px-8 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-16">Veja a diferença</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="relative aspect-video bg-gray-200 rounded-lg overflow-hidden">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <Split className="w-12 h-12 text-[#0B9D88]" />
+                <p className="text-gray-600 mt-4">Antes/Depois a tranformação</p>
+              </div>
+            </div>
+            <div className="relative aspect-video bg-gray-200 rounded-lg overflow-hidden">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <PlayCircle className="w-12 h-12 text-[#0B9D88]" />
+                <p className="text-gray-600 mt-4">Veja o processo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-8">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-16">Os diferencias da Sousas Clean</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { icon: <Heart className="w-6 h-6" />, title: 'Saúde em primeiro lugar', description: 'Ambiente livre de alérgenos para sua família' },
+              { icon: <Clock className="w-6 h-6" />, title: 'Duradouro', description: 'Resultados que resistem ao teste do tempo' },
+              { icon: <CheckCircle2 className="w-6 h-6" />, title: 'Especialistas Certificados', description: 'Profissionais treinados e experientes' },
+              { icon: <Shield className="w-6 h-6" />, title: 'Resultados Garantidos', description: 'Promessa de 100% de satisfação' },
+            ].map((benefit, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-[#36E1C5]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  {React.cloneElement(benefit.icon, { className: 'w-8 h-8 text-[#0B9D88]' })}
+                </div>
+                <h3 className="font-semibold mb-2">{benefit.title}</h3>
+                <p className="text-gray-600">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      
+
+      {/* FAQ Section */}
+      <section className="py-20 px-8">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-16">Perguntas frequentes</h2>
+          <div className="space-y-8">
+            {[
+              {
+                question: 'Quanto tempo demora o processo de limpeza?',
+                answer: 'A maioria dos serviços leva de 2 a 3 horas, dependendo do tamanho e das condições dos móveis. Garantimos uma limpeza completa, respeitando o seu tempo.'
+              },
+              {
+                question: 'Seus produtos de limpeza são seguros para crianças e animais de estimação?',
+                answer: 'Sim! Usamos soluções de limpeza ecológicas e hipoalergênicas, totalmente seguras para toda a sua família, incluindo crianças e animais de estimação.'
+              },
+              {
+                question: 'Com que frequência devo limpar meus estofados?',
+                answer: 'Recomendamos limpeza profissional a cada 12-18 meses para manutenção ideal, ou com mais frequência para móveis de alto tráfego e casas com animais de estimação.'
+              }
+            ].map((faq, index) => (
+              <div key={index} className="bg-white p-8 rounded-xl shadow-sm">
+                <div className="flex items-start gap-4">
+                  <HelpCircle className="w-6 h-6 text-[#0B9D88] flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-semibold text-lg mb-2">{faq.question}</h3>
+                    <p className="text-gray-600">{faq.answer}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 px-8 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-16">O que nossos clientes dizem</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                text: "Resultados incríveis! Meu sofá de 5 anos parece novinho em folha. A equipe foi profissional, pontual e cuidadosa. Altamente recomendado!",
+                name: "Maria Silva",
+                location: "Cambuí, Campinas"
+              },
+              {
+                text: "Como dona de animal de estimação, fiquei impressionada com a forma como eles removeram todos os pelos e odores. O tratamento de impermeabilização mudou tudo!",
+                name: "João Santos",
+                location: "Taquaral, Campinas"
+              },
+              {
+                text: "Serviço excepcional! Restauraram minhas cadeiras antigas com perfeição. Equipe muito experiente e excelente atendimento ao cliente.",
+                name: "Ana Costa",
+                location: "Barão Geraldo, Campinas"
+              }
+            ].map((review, index) => (
+              <div key={index} className="bg-white p-8 rounded-xl shadow-sm">
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-600 mb-4">{review.text}</p>
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-[#0B9D88] rounded-full mr-3"></div>
+                  <div>
+                    <p className="font-semibold">{review.name}</p>
+                    <p className="text-sm text-gray-500">{review.location}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-8 bg-[#0B9D88]">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Pronto para uma transformação?</h2>
+          <p className="text-white/90 text-lg mb-8">Schedule your professional cleaning today and enjoy a fresher, healthier home tomorrow.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://wa.me/1234567890"
+              className="inline-flex items-center justify-center bg-white text-[#0B9D88] font-semibold py-4 px-8 rounded-lg hover:bg-[#36E1C5] hover:text-white transition-all"
+            >
+              <MessageCircle className="w-5 h-5 mr-2" />
+              WhatsApp Agora
+            </a>
+            <button className="inline-flex items-center justify-center bg-[#36E1C5] text-white font-semibold py-4 px-8 rounded-lg hover:bg-white hover:text-[#0B9D88] transition-all">
+              <PhoneCall className="w-5 h-5 mr-2" />
+              Obtenha um orçamento gratuito
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-12 px-8">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 className="text-xl font-bold mb-4">Sousas Clean</h3>
+            <p className="text-gray-400">Transformando lares em Campinas e região com serviços profissionais de limpeza de estofados desde 2025.</p>
+          </div>
+          <div>
+            <h3 className="text-xl font-bold mb-4">Contato</h3>
+            <p className="text-gray-400">Telefone: (19) 98172-4419</p>
+            <p className="text-gray-400">Email: contato@sousasclean.com</p>
+            <p className="text-gray-400">Endereço: Sousas, Campinas - SP</p>
+          </div>
+          <div>
+            <h3 className="text-xl font-bold mb-4">Horário comercial</h3>
+            <p className="text-gray-400">Segunda a sexta: 8h - 18h</p>
+            <p className="text-gray-400">Sábado: 8h - 14h</p>
+            <p className="text-gray-400">Domingo: Fechado</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
+
+export default App;
