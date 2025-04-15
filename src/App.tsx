@@ -62,7 +62,7 @@ const closeModal = () => {
         <img
           src={sofaImage}
           alt="Clean sofa transformation"
-          className="w-[300px] h-auto object-contain opacity-90"
+          className=""w-full h-full object-cover"
         />
           <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
         </div>
