@@ -1,4 +1,5 @@
 import React from 'react';
+import sofaImage from './assets/images/sofá-meio-sujo-meio-limpo.png'
 import {
   Star,
   Shield,
@@ -19,8 +20,8 @@ import {
 
 
 function App() {
-  const [videoUrl, setVideoUrl] = React.useState('');
   
+const [videoUrl, setVideoUrl] = React.useState('') 
 const openModal = (url: string) => {
   setVideoUrl(url);
   setIsModalOpen(true);
@@ -59,7 +60,7 @@ const closeModal = () => {
         </div>
         <div className="flex-1 relative">
         <img
-          src="../src/assets/images/sofá-meio-sujo-meio-limpo.png"
+          src={sofaImage}
           alt="Clean sofa transformation"
           className="w-full h-full object-contain"
         />
