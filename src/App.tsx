@@ -275,7 +275,7 @@ const closeModal = () => {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4">Sousas Clean</h3>
-            <p className="text-gray-400">Transformando lares em Campinas e região com serviços profissionais de limpeza de estofados desde 2025.</p>
+            <p className="text-gray-400">Transformando lares em Campinas e região com serviços profissionais de limpeza de estofados desde 2025</p>
           </div>
           <div>
             <h3 className="text-xl font-bold mb-4">Contato</h3>
