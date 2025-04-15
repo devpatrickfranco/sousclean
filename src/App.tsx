@@ -62,14 +62,28 @@ const closeModal = () => {
 
   {/* Coluna 2 - Imagem */}
   <div className="relative order-2 h-full min-h-[400px] lg:min-h-0">
-    <img
-      src={sofaImage}
-      alt="Clean sofa transformation"
-      className="w-full h-full object-cover lg:object-[center_30%]"
-    />
-    {/* Efeito sutil de gradiente apenas nas bordas */}
-    <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent"></div>
-    <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-transparent to-transparent lg:hidden"></div>
+    <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl">
+      <img
+        src={sofaImage}
+        alt="Clean sofa transformation"
+        className="w-full h-full object-cover lg:object-[center_30%] transform hover:scale-105 transition-transform duration-500"
+      />
+      {/* Efeitos de gradiente e iluminação */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-transparent to-transparent lg:from-transparent"></div>
+      {/* Efeito de brilho sutil */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.2)_0%,_rgba(255,255,255,0)_70%)]"></div>
+    </div>
+    
+    {/* Elementos decorativos */}
+    <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-full bg-[#36E1C5] opacity-20 blur-xl"></div>
+    <div className="absolute -top-8 -left-8 w-32 h-32 rounded-full bg-[#0B9D88] opacity-10 blur-xl"></div>
+    
+    {/* Badge decorativo */}
+    <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-white px-4 py-2 rounded-full shadow-lg flex items-center">
+      <div className="w-2 h-2 bg-[#0B9D88] rounded-full mr-2 animate-pulse"></div>
+      <span className="text-sm font-medium text-gray-700">Antes & Depois</span>
+    </div>
   </div>
 </section>
       {/* Services Section */}
