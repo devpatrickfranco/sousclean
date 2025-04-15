@@ -16,20 +16,21 @@ import {
   Workflow,
 } from 'lucide-react';
 
-const [isModalOpen, setIsModalOpen] = React.useState(false);
-const [videoUrl, setVideoUrl] = React.useState('');
 
+
+function App() {
+  const [videoUrl, setVideoUrl] = React.useState('');
+  
 const openModal = (url: string) => {
   setVideoUrl(url);
   setIsModalOpen(true);
 };
 
+const [isModalOpen, setIsModalOpen] = React.useState(false);
 const closeModal = () => {
   setIsModalOpen(false);
 };
 
-
-function App() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
