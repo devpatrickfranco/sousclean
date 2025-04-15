@@ -16,6 +16,19 @@ import {
   Workflow,
 } from 'lucide-react';
 
+const [isModalOpen, setIsModalOpen] = React.useState(false);
+const [videoUrl, setVideoUrl] = React.useState('');
+
+const openModal = (url: string) => {
+  setVideoUrl(url);
+  setIsModalOpen(true);
+};
+
+const closeModal = () => {
+  setIsModalOpen(false);
+};
+
+
 function App() {
   return (
     <div className="min-h-screen bg-white">
@@ -35,9 +48,11 @@ function App() {
             <button className="bg-[#0B9D88] hover:bg-[#36E1C5] text-white font-semibold py-4 px-8 rounded-lg transition-all">
              Agende agora
             </button>
-            <button className="inline-flex items-center justify-center border-2 border-[#0B9D88] text-[#0B9D88] font-semibold py-4 px-8 rounded-lg hover:bg-[#0B9D88] hover:text-white transition-all">
-              <PlayCircle className="w-5 h-5 mr-2" />
-               Veja como
+            <button
+              onClick={() => openModal('/videos/veja-como.mp4')}
+              className="inline-flex items-center justify-center border-2 border-[#0B9D88] text-[#0B9D88] font-semibold py-4 px-8 rounded-lg hover:bg-[#0B9D88] hover:text-white transition-all">
+             <PlayCircle className="w-5 h-5 mr-2" />
+              Veja como
             </button>
           </div>
         </div>
@@ -115,12 +130,15 @@ function App() {
                 <p className="text-gray-600 mt-4">Antes/Depois a tranformação</p>
               </div>
             </div>
-            <div className="relative aspect-video bg-gray-200 rounded-lg overflow-hidden">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <PlayCircle className="w-12 h-12 text-[#0B9D88]" />
-                <p className="text-gray-600 mt-4">Veja o processo</p>
-              </div>
+            <div
+              onClick={() => openModal('/videos/veja-o-processo.mp4')}
+              className="relative aspect-video bg-gray-200 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition"
+              >
+               <div className="absolute inset-0 flex items-center justify-center">
+               <PlayCircle className="w-12 h-12 text-[#0B9D88]" />
+               <p className="text-gray-600 mt-4">Veja o processo</p>
             </div>
+          </div>      
           </div>
         </div>
       </section>
@@ -267,6 +285,26 @@ function App() {
           </div>
         </div>
       </footer>
+
+      {/* Modal de Vídeo */}
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-60 z-50 flex items-center justify-center">
+          <div className="bg-white p-4 rounded-xl shadow-xl max-w-2xl w-full relative">
+            <button
+              className="absolute top-2 right-2 text-2xl text-gray-600 hover:text-gray-800"
+              onClick={closeModal}
+            >
+              &times;
+            </button>
+            <video
+              src={videoUrl}
+              controls
+              autoPlay
+              className="w-full rounded-lg"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
