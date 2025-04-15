@@ -39,8 +39,8 @@ const closeModal = () => {
   {/* Coluna 1 - Texto e Botões */}
   <div className="p-8 lg:p-16 flex flex-col justify-center order-1">
     <h1 className="text-4xl lg:text-6xl font-bold mb-6">
-      Diga adeus à sujeira{' '}
-      <span className="bg-gradient-to-r from-[#0B9D88] via-[#36E1C5] to-[#B9FFF5] bg-clip-text text-transparent">
+      <span className="block">Diga adeus à sujeira</span>
+      <span className="bg-gradient-to-r from-[#0B9D88] via-[#36E1C5] to-[#B9FFF5] bg-clip-text text-transparent block">
         Diga olá ao Conforto
       </span>
     </h1>
