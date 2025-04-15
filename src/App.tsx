@@ -106,7 +106,7 @@ const closeModal = () => {
           <h2 className="text-3xl lg:text-4xl font-bold text-center mb-16">Nosso Processo</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { step: '01', title: 'Inspeção', description: 'Thorough evaluation of your furniture\'s condition' },
+              { step: '01', title: 'Inspeção', description: 'Avaliação completa do estado dos seus móveis' },
               { step: '02', title: 'Plano personalizado', description: 'Abordagem de limpeza personalizada para melhores resultados' },
               { step: '03', title: 'Limpeza profunda', description: 'Limpeza profissional com produtos ecológicos' },
               { step: '04', title: 'Proteção', description: 'Toques finais e tratamento protetor' },
@@ -239,7 +239,7 @@ const closeModal = () => {
                     <p className="text-sm text-gray-500">{review.location}</p>
                   </div>
                 </div>
-              </div>
+              </div>Avaliação completa do estado dos seus móveis
             ))}
           </div>
         </div>
@@ -249,7 +249,7 @@ const closeModal = () => {
       <section className="py-20 px-8 bg-[#0B9D88]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Pronto para uma transformação?</h2>
-          <p className="text-white/90 text-lg mb-8">Schedule your professional cleaning today and enjoy a fresher, healthier home tomorrow.</p>
+          <p className="text-white/90 text-lg mb-8">Agende sua limpeza profissional hoje mesmo e tenha uma casa mais fresca e saudável amanhã.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="https://wa.me/1234567890"
