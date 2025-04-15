@@ -249,7 +249,7 @@ const closeModal = () => {
       <section className="py-20 px-8 bg-[#0B9D88]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Pronto para uma transformação?</h2>
-          <p className="text-white/90 text-lg mb-8">Agende sua limpeza profissional hoje mesmo e tenha uma casa mais fresca e saudável amanhã.</p>
+          <p className="text-white/90 text-lg mb-8">Agende sua limpeza profissional hoje mesmo e desfrute de uma casa mais fresca e saudável amanhã.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="https://wa.me/1234567890"
