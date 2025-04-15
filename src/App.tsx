@@ -35,39 +35,43 @@ const closeModal = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="min-h-screen flex flex-col lg:flex-row">
-        <div className="flex-1 p-8 lg:p-16 flex flex-col justify-center">
-          <h1 className="text-4xl lg:text-6xl font-bold mb-6">
-            Diga adeus à sujeira{' '}
-            <span className="bg-gradient-to-r from-[#0B9D88] via-[#36E1C5] to-[#B9FFF5] bg-clip-text text-transparent">
-              Diga olá ao Conforto
-            </span>
-          </h1>
-          <p className="text-gray-600 text-lg mb-8">
-          Mais de 100 famílias em Campinas e região confiaram em nós para dar vida nova aos seus móveis queridos. Limpeza especializada de estofados que transforma sua casa em um espaço mais saudável e bonito.
-          </p>
-          <div className="flex gap-4">
-            <button className="bg-[#0B9D88] hover:bg-[#36E1C5] text-white font-semibold py-4 px-8 rounded-lg transition-all">
-             Agende agora
-            </button>
-            <button
-              onClick={() => openModal('/videos/veja-como.mp4')}
-              className="inline-flex items-center justify-center border-2 border-[#0B9D88] text-[#0B9D88] font-semibold py-4 px-8 rounded-lg hover:bg-[#0B9D88] hover:text-white transition-all">
-             <PlayCircle className="w-5 h-5 mr-2" />
-              Veja como
-            </button>
-          </div>
-        </div>
-        <div className="flex-1 relative">
-        <img
-          src={sofaImage}
-          alt="Clean sofa transformation"
-          className=""w-full h-full object-cover"
-        />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
-        </div>
-      </section>
+      <section className="min-h-screen grid grid-cols-1 lg:grid-cols-2">
+  {/* Coluna 1 - Texto e Botões */}
+  <div className="p-8 lg:p-16 flex flex-col justify-center order-1">
+    <h1 className="text-4xl lg:text-6xl font-bold mb-6">
+      Diga adeus à sujeira{' '}
+      <span className="bg-gradient-to-r from-[#0B9D88] via-[#36E1C5] to-[#B9FFF5] bg-clip-text text-transparent">
+        Diga olá ao Conforto
+      </span>
+    </h1>
+    <p className="text-gray-600 text-lg mb-8 max-w-[600px]">
+      Mais de 100 famílias em Campinas e região confiaram em nós para dar vida nova aos seus móveis queridos. Limpeza especializada de estofados que transforma sua casa em um espaço mais saudável e bonito.
+    </p>
+    <div className="flex flex-col sm:flex-row gap-4">
+      <button className="bg-[#0B9D88] hover:bg-[#36E1C5] text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+        Agende agora
+      </button>
+      <button
+        onClick={() => openModal('/videos/veja-como.mp4')}
+        className="inline-flex items-center justify-center border-2 border-[#0B9D88] text-[#0B9D88] font-semibold py-4 px-8 rounded-lg hover:bg-[#0B9D88] hover:text-white transition-all duration-300 transform hover:scale-105">
+        <PlayCircle className="w-5 h-5 mr-2" />
+        Veja como
+      </button>
+    </div>
+  </div>
 
+  {/* Coluna 2 - Imagem */}
+  <div className="relative order-2 h-full min-h-[400px] lg:min-h-0">
+    <img
+      src={sofaImage}
+      alt="Clean sofa transformation"
+      className="w-full h-full object-cover lg:object-[center_30%]"
+    />
+    {/* Efeito sutil de gradiente apenas nas bordas */}
+    <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent"></div>
+    <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-transparent to-transparent lg:hidden"></div>
+  </div>
+</section>
       {/* Services Section */}
       <section className="py-20 px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
