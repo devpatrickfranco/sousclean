@@ -243,7 +243,7 @@ const closeModal = () => {
                     <p className="text-sm text-gray-500">{review.location}</p>
                   </div>
                 </div>
-              </div>Avaliação completa do estado dos seus móveis
+              </div>
             ))}
           </div>
         </div>
