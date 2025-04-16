@@ -52,7 +52,7 @@ const closeModal = () => {
         Agende agora
       </button>
       <button
-        onClick={() => openModal('/videos/veja-como.mp4')}
+        onClick={() => openModal('https://www.youtube.com/watch?v=fer0OzFNrQo')}
         className="inline-flex items-center justify-center border-2 border-[#0B9D88] text-[#0B9D88] font-semibold py-4 px-8 rounded-lg hover:bg-[#0B9D88] hover:text-white transition-all duration-300 transform hover:scale-105">
         <PlayCircle className="w-5 h-5 mr-2" />
         Veja como
@@ -151,7 +151,7 @@ const closeModal = () => {
               </div>
             </div>
             <div
-              onClick={() => openModal('/videos/veja-o-processo.mp4')}
+              onClick={() => openModal('https://www.youtube.com/watch?v=fer0OzFNrQo')}
               className="relative aspect-video bg-gray-200 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition"
               >
                <div className="absolute inset-0 flex items-center justify-center">
