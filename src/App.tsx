@@ -1,6 +1,7 @@
 import React from 'react';
 import sofaImage from './assets/images/sofá-meio-sujo-meio-limpo.png'
 import sofaVideo from './assets/videos/videoplayback.mp4'
+import logo from './assets/images/logo-sem-fundo.png'
 import {  
   Star,
   Shield,
@@ -37,29 +38,36 @@ const closeModal = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="min-h-screen grid grid-cols-1 lg:grid-cols-2">
-  {/* Coluna 1 - Texto e Botões */}
-  <div className="p-8 lg:p-16 flex flex-col justify-center order-1">
-    <h1 className="text-4xl lg:text-6xl font-bold mb-6">
-      <span className="block">Diga adeus à sujeira</span>
-      <span className="bg-gradient-to-r from-[#0B9D88] via-[#36E1C5] to-[#B9FFF5] bg-clip-text text-transparent block">
-        Diga olá ao Conforto
-      </span>
-    </h1>
-    <p className="text-gray-600 text-lg mb-8 max-w-[600px]">
-      Mais de 100 famílias em Campinas e região confiaram em nós para dar vida nova aos seus móveis queridos. Limpeza especializada de estofados que transforma sua casa em um espaço mais saudável e bonito.
-    </p>
-    <div className="flex flex-col sm:flex-row gap-4">
-      <button className="bg-[#0B9D88] hover:bg-[#36E1C5] text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-        Agende agora
-      </button>
-      <button
-        onClick={() => openModal(sofaVideo)}
-        className="inline-flex items-center justify-center border-2 border-[#0B9D88] text-[#0B9D88] font-semibold py-4 px-8 rounded-lg hover:bg-[#0B9D88] hover:text-white transition-all duration-300 transform hover:scale-105">
-        <PlayCircle className="w-5 h-5 mr-2" />
-        Veja como
-      </button>
-    </div>
-  </div>
+        
+      {/* Coluna 1 - Texto e Botões */}
+<div className="p-8 lg:p-16 flex flex-col justify-center order-1 relative">
+
+{/* Logo fixado no canto superior esquerdo da coluna */}
+<div className="absolute top-8 left-8 lg:top-16 lg:left-16">
+  <img src={logo} alt="Logo Sousas Clean" className="h-64 w-auto" />
+</div>
+
+<h1 className="text-4xl lg:text-6xl font-bold mb-6">
+  <span className="block">Diga adeus à sujeira</span>
+  <span className="bg-gradient-to-r from-[#0B9D88] via-[#36E1C5] to-[#B9FFF5] bg-clip-text text-transparent block">
+    Diga olá ao Conforto
+  </span>
+</h1>
+<p className="text-gray-600 text-lg mb-8 max-w-[600px]">
+  Mais de 100 famílias em Campinas e região confiaram em nós para dar vida nova aos seus móveis queridos. Limpeza especializada de estofados que transforma sua casa em um espaço mais saudável e bonito.
+</p>
+<div className="flex flex-col sm:flex-row gap-4">
+  <button className="bg-[#0B9D88] hover:bg-[#36E1C5] text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+    <a href="https://wa.me/5519981947148">Agende agora</a>
+  </button>
+  <button
+    onClick={() => openModal(sofaVideo)}
+    className="inline-flex items-center justify-center border-2 border-[#0B9D88] text-[#0B9D88] font-semibold py-4 px-8 rounded-lg hover:bg-[#0B9D88] hover:text-white transition-all duration-300 transform hover:scale-105">
+    <PlayCircle className="w-5 h-5 mr-2" />
+    Veja como
+  </button>
+</div>
+</div>
 
   {/* Coluna 2 - Imagem */}
   <div className="relative order-2 h-full min-h-[400px] lg:min-h-0">
@@ -100,8 +108,8 @@ const closeModal = () => {
               },
               {
                 icon: <Shield className="w-8 h-8 text-[#0B9D88]" />,
-                title: 'Impermeabilização',
-                description: 'Proteção avançada contra derramamentos e manchas, tornando seus móveis resistentes a acidentes diários e mais fáceis de manter.'
+                title: 'Lavagem de tapetes e carpetes',
+description: 'Serviço especializado para remover sujeira, manchas e odores, mantendo seus tapetes e carpetes limpos, frescos e bem cuidados.'
               },
               {
                 icon: <Bug className="w-8 h-8 text-[#0B9D88]" />,
@@ -197,7 +205,7 @@ const closeModal = () => {
             {[
               {
                 question: 'Quanto tempo demora o processo de limpeza?',
-                answer: 'A maioria dos serviços leva de 2 a 3 horas, dependendo do tamanho e das condições dos móveis. Garantimos uma limpeza completa, respeitando o seu tempo.'
+                answer: 'A maioria dos serviços leva de 1 a 2 horas, dependendo do tamanho e das condições dos móveis. Garantimos uma limpeza completa, respeitando o seu tempo.'
               },
               {
                 question: 'Seus produtos de limpeza são seguros para crianças e animais de estimação?',
@@ -205,7 +213,7 @@ const closeModal = () => {
               },
               {
                 question: 'Com que frequência devo limpar meus estofados?',
-                answer: 'Recomendamos limpeza profissional a cada 12-18 meses para manutenção ideal, ou com mais frequência para móveis de alto tráfego e casas com animais de estimação.'
+                answer: 'Recomendamos limpeza profissional a cada 6 meses para manutenção ideal, ou com mais frequência para móveis de alto tráfego e casas com animais de estimação.'
               }
             ].map((faq, index) => (
               <div key={index} className="bg-white p-8 rounded-xl shadow-sm">
@@ -234,7 +242,7 @@ const closeModal = () => {
                 location: "Cambuí, Campinas"
               },
               {
-                text: "Como dona de animal de estimação, fiquei impressionada com a forma como eles removeram todos os pelos e odores. O tratamento de impermeabilização mudou tudo!",
+                text: "Como dona de animal de estimação, fiquei impressionada com a forma como eles removeram todos os pelos e odores. Mudou tudo!",
                 name: "João Santos",
                 location: "Taquaral, Campinas"
               },
@@ -271,7 +279,7 @@ const closeModal = () => {
           <p className="text-white/90 text-lg mb-8">Agende sua limpeza profissional hoje mesmo e desfrute de uma casa mais fresca e saudável amanhã.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://wa.me/1234567890"
+              href="https://wa.me/5519981947148"
               className="inline-flex items-center justify-center bg-white text-[#0B9D88] font-semibold py-4 px-8 rounded-lg hover:bg-[#36E1C5] hover:text-white transition-all"
             >
               <MessageCircle className="w-5 h-5 mr-2" />
@@ -290,7 +298,7 @@ const closeModal = () => {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4">Sousas Clean</h3>
-            <p className="text-gray-400">Transformando lares em Campinas e região com serviços profissionais de limpeza de estofados desde 2025</p>
+            <p className="text-gray-400">Transformando lares em Campinas e região com serviços profissionais de limpeza de estofados desde 2022</p>
           </div>
           <div>
             <h3 className="text-xl font-bold mb-4">Contato</h3>
