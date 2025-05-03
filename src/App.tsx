@@ -62,7 +62,7 @@ const closeModal = () => {
           </span>
         </h1>
         <p className="text-gray-600 text-lg mb-8 max-w-[600px]">
-          Mais de 100 famílias em Campinas e região confiaram em nós para dar vida nova aos seus móveis queridos. Limpeza especializada de estofados que transforma sua casa em um espaço mais saudável e bonito.
+          Mais de 100 famílias em Sousas, Campinas e região confiaram em nós para dar vida nova aos seus móveis queridos. Limpeza especializada de estofados que transforma sua casa em um espaço mais saudável e bonito.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <button className="bg-[#0B9D88] hover:bg-[#36E1C5] text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -85,7 +85,7 @@ const closeModal = () => {
             <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src={sofaImage}
-                alt="Clean sofa transformation"
+                alt="sofa sujo antes da limpeza e limpo depois o trabalho da sousas clean"
                 className="w-full h-full object-cover lg:object-[center_30%] transform hover:scale-105 transition-transform duration-500"
               />
               {/* Efeitos de gradiente e iluminação */}

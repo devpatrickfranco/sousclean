@@ -53,7 +53,7 @@ const BeforeAfterSlider = ({ beforeImage, afterImage }: BeforeAfterSliderProps) 
       <div className="absolute inset-0 w-full h-full">
         <img 
           src={beforeImage}
-          alt="Sofá antes da limpeza"
+          alt="Sofá antes da limpeza da Sousas Clean"
           className="w-full h-full object-cover"
         />
       </div>
@@ -65,7 +65,7 @@ const BeforeAfterSlider = ({ beforeImage, afterImage }: BeforeAfterSliderProps) 
       >
         <img 
           src={afterImage}
-          alt="Sofá depois da limpeza"
+          alt="Sofá depois da limpeza da Sousas Clean"
           className="w-full h-full object-cover"
         />
       </div>
