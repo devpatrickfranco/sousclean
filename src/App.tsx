@@ -326,7 +326,7 @@ description: 'Serviço especializado para remover sujeira, manchas e odores, man
           </div>
           <div>
             <h3 className="text-xl font-bold mb-4">Contato</h3>
-            <p className="text-gray-400">Telefone: (19) 98194-7148</p>
+            <p className="text-gray-400">Telefone: +55 (19) 98194-7148</p>
             <p className="text-gray-400">Email: contato@sousasclean.com</p>
             <p className="text-gray-400">Endereço: Sousas, Campinas - SP</p>
           </div>
